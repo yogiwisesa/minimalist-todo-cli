@@ -7,7 +7,8 @@
     "todo-cli": "./index.js"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "publish": "rm -rf todo.json && npm publish"
   },
   "author": "Yogi Wisesa",
   "license": "MIT",
