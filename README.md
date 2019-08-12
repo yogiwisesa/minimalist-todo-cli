@@ -3,6 +3,9 @@
 
 Minimalist to-do list to help you stay productive. With customizable timer for working and resting, you can use it with pomodoro technique.
 
+![Preview](https://media.giphy.com/media/QXbj4ZJ9BwhziS7556/giphy.gif)
+![Preview](https://media.giphy.com/media/QBYHZMhbYLRbonbjOY/giphy.gif)
+
 ## Getting Started
 
 These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See deployment for notes on how to deploy the project on a live system.
