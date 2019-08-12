@@ -2,8 +2,6 @@ global.fs = require('promise-fs');
 const yargs = require('yargs');
 global._ = require('lodash');
 global.chalk = require('chalk');
-global.progressbar = require('cli-progress');
-global.progressbarColors = require('colors');
 global.colors = ['black', 'red', 'green', 'yellow', 'blue', 'magenta', 'cyan', 'white', 'gray']
 
 global.options = yargs.usage("Usage: -add <task name>")
