@@ -13,17 +13,17 @@ global.options = yargs.usage("Usage: -add <task name>")
   .option("f", {
     alias: "finish",
     describe: "Finish todolist | -f <index>",
-    type: "string"
+    type: "integer"
   })
   .option("uf", {
     alias: "unfinish",
     describe: "Unfinish todolist | -uf <index>",
-    type: "string"
+    type: "integer"
   })
   .option("d", {
     alias: "delete",
     describe: "Delete task from the todo list | -d <index>",
-    type: "string"
+    type: "integer"
   })
   .option("l", {
     alias: "list",
@@ -32,10 +32,12 @@ global.options = yargs.usage("Usage: -add <task name>")
   .option("s", {
     alias: "start",
     describe: "Start work time - default 25min | -s / -s <duration>",
+    type: "integer"
   })
   .option("r", {
     alias: "rest",
     describe: "take a break and rest for a moment - default 5min | -r / -r <duration>",
+    type: "integer"
   })
   .argv;
 
