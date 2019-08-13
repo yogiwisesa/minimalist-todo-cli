@@ -25,7 +25,7 @@ module.exports = (dur) => {
   const total = duration * 1000 * 60
   const postfix = `${chalk.yellow('Stay productive, You can do it!')}`;
   const spinner = ora(`${chalk.bold(`00:00:00`)} - ${postfix}`).start();
-
+  
   const interval = setInterval(() => {
     sec++;
 
@@ -37,5 +37,9 @@ module.exports = (dur) => {
     clearInterval(interval);
     spinner.stop();
     console.log(`${chalk.yellow('Congratulations!🎉\nYou finished your task!')}`)
+    notifier.notify({
+      title: 'Congratulations!🎉',
+      message: 'You finished your task! take a rest for a while then be productive again'
+    });
   }, total)
 }

@@ -25,5 +25,9 @@ module.exports = (dur) => {
     clearInterval(interval);
     spinner.stop();
     console.log(`${chalk.yellow('Start working again, you can do it!')}`)
+    notifier.notify({
+      title: 'Heyheyhey!',
+      message: 'Start working again, you can do it!'
+    });
   }, total)
 }
