@@ -7,7 +7,7 @@
     "todo-cli": "./index.js"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\""
+    "test": "NODE_ENV='test' jest --coverage"
   },
   "author": "Yogi Wisesa",
   "license": "MIT",

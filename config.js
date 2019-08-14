@@ -4,6 +4,7 @@ global._ = require('lodash');
 global.chalk = require('chalk');
 global.colors = ['black', 'red', 'green', 'yellow', 'blue', 'magenta', 'cyan', 'white', 'gray'];
 global.notifier = require('node-notifier');
+global.filePath = process.env.NODE_ENV === 'test' ? './todo-test.json' : './todo.json';
 
 global.options = yargs.usage("Usage: -add <task name>")
   .option("a", {

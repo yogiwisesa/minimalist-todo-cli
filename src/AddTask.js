@@ -4,7 +4,7 @@ module.exports = (task, todo) => {
     finished: false
   })
 
-  fs.writeFile("todo.json", JSON.stringify(todo))
+  fs.writeFile(filePath, JSON.stringify(todo))
     .then(() => console.log(chalk.green('Todolist added successfully')))
     .catch((err) => console.log(`Error --> ${chalk.red(err)}`));
 }
