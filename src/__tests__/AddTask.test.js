@@ -1,6 +1,6 @@
 const AddTask = require('../AddTask');
 
-test('Should add new task if todo is empty', () => {
+test('Should add new task if todo is empty', async () => {
   const todo = [];
   const task = 'task';
   const expected = [{
@@ -9,13 +9,15 @@ test('Should add new task if todo is empty', () => {
   }]
 
   const spyOnFs = jest.spyOn(fs, 'writeFile');
+  const spyOnConsole = jest.spyOn(console, 'log');
 
-  AddTask(task, todo);
+  await AddTask(task, todo)
 
   expect(spyOnFs).toHaveBeenCalledWith(filePath, JSON.stringify(expected));
-})
+  expect(spyOnConsole).toHaveBeenCalled();
+});
 
-test('Should add new task if todo isn`t empty', () => {
+test('Should add new task if todo isn`t empty', async () => {
   const todo = [{
     task: 'yep',
     finished: false
@@ -31,8 +33,10 @@ test('Should add new task if todo isn`t empty', () => {
   ]
 
   const spyOnFs = jest.spyOn(fs, 'writeFile');
+  const spyOnConsole = jest.spyOn(console, 'log');
 
-  AddTask(task, todo);
+  await AddTask(task, todo);
 
   expect(spyOnFs).toHaveBeenCalledWith(filePath, JSON.stringify(expected));
-})
+  expect(spyOnConsole).toHaveBeenCalled();
+});
