@@ -20,6 +20,6 @@ const action = (todo) => {
   else if (options.rest) Rest(options.rest)
 }
 
-fs.readFile('todo.json')
+fs.readFile(filePath)
   .then(todo => action(JSON.parse(todo)))
   .catch(err => action([]))
