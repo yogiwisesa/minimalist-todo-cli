@@ -43,10 +43,12 @@ global.options = yargs.usage("Usage: -add <task name>")
   })
   .argv;
 
+/* istanbul ignore next */
 const pad = (num) => {
   return ("0" + num).slice(-2);
 }
 
+/* istanbul ignore next */
 global.tohhmmss = (secs) => {
   var minutes = Math.floor(secs / 60);
   secs = secs % 60;
