@@ -1,5 +1,9 @@
 module.exports = (task, todo) => {
-
+  if (todo.length < task) {
+    console.log(chalk.red('Your target unavailable'));
+    return;
+  }
+  
   todo[task - 1] = {
     name: todo[task - 1].name,
     finished: true
