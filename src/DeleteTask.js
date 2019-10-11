@@ -1,4 +1,9 @@
 module.exports = (task, todo) => {
+  if (todo.length < task) {
+    console.log(chalk.red('Your target unavailable'));
+    return;
+  }
+
   todo.splice(task - 1, 1)
 
   return new Promise ((resolve, reject) => {
